@@ -1,4 +1,4 @@
-import {model, models, Schema} from "mongoose";
+import { model, models, Schema } from "mongoose";
 
 const ProductSchema = new Schema({
   name: String,
@@ -8,6 +8,7 @@ const ProductSchema = new Schema({
   picture: String,
 });
 
-const Product = models?.Product || model('Product', ProductSchema);
+// check if we have an existing model, if not create a new one
+const Product = models?.Product || model("Product", ProductSchema);
 
 export default Product;
